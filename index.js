@@ -22,7 +22,6 @@ Middleware
 app.use(cors({
      origin: [
     'http://localhost:5173/',
-    'https://profast-sever-site.vercel.app/'
   ],
     
     credentials: true
