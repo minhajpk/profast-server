@@ -10,17 +10,24 @@ const port = process.env.PORT || 3000;
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 
-const serviceAccount = require("./firebase_admin_key.json");
+const decodedKey = Buffer.from(process.env.FB_Service_Key, 'base64').toString('utf8');
+const serviceAccount = JSON.parse(decodedKey);
+
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
 
 
 // Middleware
-app.use(cors({
-    origin: 'http://localhost:5173',
-    credentials: true
-}));
+// app.use(cors({
+//      origin: [
+//     'http://localhost:3000',
+//     'https://profast-sever-site.vercel.app/'
+//   ],
+    
+//     credentials: true
+// }));
+app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
