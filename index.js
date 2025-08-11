@@ -710,10 +710,10 @@ async function run() {
 
         });
 
-        await client.db("admin").command({ ping: 1 });
-        console.log(" Connected to MongoDB!");
+        // await client.db("admin").command({ ping: 1 });
+        // console.log(" Connected to MongoDB!");
     } catch (err) {
-        console.error(" MongoDB connection error:", err);
+        // console.error(" MongoDB connection error:", err);
     }
 }
 
