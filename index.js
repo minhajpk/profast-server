@@ -21,7 +21,7 @@ admin.initializeApp({
 // Middleware
 app.use(cors({
      origin: [
-    'https://profast-22ef5.web.app/',
+    'https://profast-22ef5.web.app',
   ],
     
     credentials: true
