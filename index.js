@@ -18,16 +18,16 @@ admin.initializeApp({
 });
 
 
-// Middleware
-// app.use(cors({
-//      origin: [
-//     'http://localhost:3000',
-//     'https://profast-sever-site.vercel.app/'
-//   ],
+Middleware
+app.use(cors({
+     origin: [
+    'http://localhost:5173/',
+    'https://profast-sever-site.vercel.app/'
+  ],
     
-//     credentials: true
-// }));
-app.use(cors());
+    credentials: true
+}));
+// app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
